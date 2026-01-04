@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+src/sudanese_mobius/S3_parameterization.py
+src/sudanese_mobius/__init__.py
+src/sudanese_mobius/curvature.py
+src/sudanese_mobius/parameters.py
+src/sudanese_mobius/stereo_projection.py
+src/sudanese_mobius/visualization.py
+src/sudanese_mobius.egg-info/PKG-INFO
+src/sudanese_mobius.egg-info/SOURCES.txt
+src/sudanese_mobius.egg-info/dependency_links.txt
+src/sudanese_mobius.egg-info/requires.txt
+src/sudanese_mobius.egg-info/top_level.txt
