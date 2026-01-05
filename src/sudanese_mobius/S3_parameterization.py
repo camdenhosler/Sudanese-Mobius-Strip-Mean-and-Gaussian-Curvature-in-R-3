@@ -4,7 +4,28 @@
 import numpy as np
 
 def mobius_strip_s3(u, v, twist=0.5):
+    """
+    Parameterization of the Möbius strip in S³ as devised by Lawson.
 
+    The parameter `twist` controls how the surface is embedded in S3.
+    Setting `twist=0.5` produces a Mobius strip; setting `twist=1.0`
+    yields a torus instead. The resulting surface is rotated slightly
+    to avoid contact with the north pole of the 3-sphere.
+
+    Parameters
+    ----------
+    u : ndarray
+        First grid parameter (e.g., `u_min ≤ u ≤ u_max`).
+    v : ndarray
+        Second grid parameter (e.g., `v_min ≤ v ≤ v_max`).
+    twist : float
+        Embedding twist factor set to 0.5.
+
+    Returns
+    -------
+    x : ndarray
+        Array of points (shape: (..., 4) representing the surface in S3.
+    """ 
     x1 = np.cos(u) * np.cos(v)
     x2 = np.cos(u) * np.sin(v)
     x3 = np.sin(u) * np.cos(twist * v)

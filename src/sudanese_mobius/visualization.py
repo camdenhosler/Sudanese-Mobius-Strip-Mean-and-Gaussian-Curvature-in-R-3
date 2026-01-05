@@ -16,6 +16,53 @@ def plot_surface(
     stride: int = 4,
     initial_key: str = "|H|"
 ):
+    """
+    Plots the surface with various color maps to demonstrate differences in
+    curvature and metric between S3 and R3.
+
+    The parameter `stride` decides the resolution of the surface. Setting 
+    `stride=4` was the most stable for my computer but it can be lowered as 
+    long as the resolution%stride = 1
+    Scale is provided in both the curvature data and directly into the function
+    so it can be set as optional.  Meaning if Scale is not provided the
+    simulation will still run
+
+    Parameters
+    ----------
+    c : ndarray
+        Array of points (shape: (..., 3) representing the projection of the 
+        surface in R3.
+    curv : CurvatureData
+        Data class containg
+        -mean_curvature: ndarray
+            Array of points (shape: (...,) representing the Mean Curvature of 
+            the surface in R3.
+        -gaussian_curvature : ndarray
+            Array of points (shape: (...,) representing the Gaussian Curvature 
+            of the surface in R3.
+        -scale_factor: ndarray
+            Array of scalar values at each point (shape: (...,) representing 
+            the surface's scale factor in R3.
+    K_S3 : ndarray, optional
+        Array of points (shape: (...,) representing the Gaussian Curvature of 
+        the surface in S3.
+    scale : ndarray, optional
+        Array of scalar values at each point (shape: (...,) representing 
+        the surface's scale factor in R3.    
+    initial_key : string
+        Used to set the initial radio button value
+
+    Returns
+    -------
+
+    fig : matplotlib.figure.Figure
+        The figure which the surface is plotted on
+    ax : mpl_toolkits.mplot3d.Axes3D
+        The 3D axes
+    radio : RadioButtons
+        The radio button used to control which colormap is shown
+    
+    """
     data_lib_full = {
         "|H|": np.abs(curv.mean_curvature),
         "$K_{R^3}$": curv.gaussian_curvature,
@@ -75,7 +122,7 @@ def plot_surface(
         new_data = data_lib[label]
         vmin, vmax = np.nanmin(new_data), np.nanmax(new_data)
         
-        # choose normalization & cmap based on sign
+        # Choose normalization & cmap based on data
         if vmin < 0 < vmax:
             new_norm = colors.TwoSlopeNorm(vmin=-max(abs(vmin), abs(vmax)), vcenter=0.0, vmax=max(abs(vmin), abs(vmax)))
             new_cmap = plt.cm.coolwarm
@@ -84,7 +131,7 @@ def plot_surface(
             new_cmap = plt.cm.inferno
                 
                 
-        # remove old surface and redraw
+        # Remove old surface and redraw
         if surf is not None:
             try:
                 surf.remove()
@@ -93,7 +140,7 @@ def plot_surface(
 
         surf = draw_surface(new_data, new_norm, new_cmap)
 
-        # update colorbar
+        # Update colorbar
         mappable.set_norm(new_norm)
         mappable.set_cmap(new_cmap)
         mappable.set_array(new_data)
@@ -110,7 +157,7 @@ def plot_surface(
     
     fig.radio = radio
     
-    # cosmetic: set aspect
+    # Cosmetic: set aspect
     Xflat, Yflat, Zflat = c[:, :, 0], c[:, :, 1], c[:, :, 2]
     ax.set_box_aspect([np.ptp(Xflat), np.ptp(Yflat), np.ptp(Zflat)])
     ax.set_title("Visualization of Sudanese Mobius Strip")
@@ -118,6 +165,5 @@ def plot_surface(
     plt.style.use("seaborn-v0_8")
     plt.show()
 
-    # return objects for testing/automation if caller needs them
     return fig, ax, radio
 

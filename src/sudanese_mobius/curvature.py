@@ -12,6 +12,30 @@ class CurvatureData:
 
 
 def gaussian_curvature_S3(x, du, dv):
+    """
+    Gaussian Curvature Calculation.
+
+    Here K_0 is 1 since S_3 has a curvature of 1 and the below formula is used
+    K_S3 = (L*N - M**2) / (E*G - F**2) + K_0
+    where L,N,M,E,G, and F are calculated as the entries of the first and 
+    second fundamental forms of the surface in S3.
+
+    Parameters
+    ----------
+    x : ndarray
+        Array of points (shape: (..., 4) representing the surface in S3.
+    du : float
+        Grid spacing in the u direction for finite differences
+    dv : float
+        Grid spacing in the v direction for finite differences
+
+
+    Returns
+    -------
+    K_S3 : ndarray
+        Array of points (shape: (...,) representing the Gaussian Curvature of 
+        the surface in S3.
+    """ 
     #Gaussian Curvature in S^3
     xu = np.gradient(x, du, axis=0, edge_order=2)
     xv = np.gradient(x, dv, axis=1, edge_order=2)
@@ -55,6 +79,48 @@ def gaussian_curvature_S3(x, du, dv):
 
 
 def comp_curve_data(c, scale, K_S3, du, dv):
+    """
+    Total Curvature Calculation for the surface in R3
+
+    Takes the scale_factor calculated by the stereographic projection and the
+    parameterization in R3 uses the mean curvature formula:
+    H = (L*G - 2*M*F + N*E) / (2 * (E*G - F**2)
+    and the Gaussian curvature formula:
+    (L*N - M**2) / (E*G - F**2) 
+    Where L,N,M,E,G, and F are calculated as the entries of the first and
+    second fundamental forms of the surface in R3.
+
+    Parameters
+    ----------
+    c : ndarray
+        Array of points (shape: (..., 3) representing the projected surface in
+        R3.
+    scale: ndarray
+        Array of scalar values at each point (shape: (...,) representing 
+        the surface's scale factor in R3.
+    K_S3 : ndarray
+        Array of points (shape: (...,) representing the Gaussian Curvature of 
+        the surface in S3.
+    du : float
+        Grid spacing in the u direction for finite differences
+    dv : float
+        Grid spacing in the v direction for finite differences
+
+
+    Returns
+    -------
+    CurvatureData
+        Data class containg
+        -mean_curvature: ndarray
+            Array of points (shape: (...,) representing the Mean Curvature of 
+            the surface in R3.
+        -gaussian_curvature : ndarray
+            Array of points (shape: (...,) representing the Gaussian Curvature 
+            of the surface in R3.
+        -scale_factor: ndarray
+            Array of scalar values at each point (shape: (...,) representing 
+            the surface's scale factor in R3.
+    """ 
     #Mean Curvature Calculations in R^3
     cu = np.gradient(c, du, axis=0, edge_order=2)
     cv = np.gradient(c, dv, axis=1, edge_order=2)
