@@ -21,8 +21,8 @@ The Sudanese Mobius Strip is a minimal surface in $S^3$ orginally parameterized 
 The Stereographic Projection is calculated as below
 
 $$ 
-X_s = \frac{X_1}{1 - X_4}
-Y_s = \frac{X_2}{1 - X_4}
+X_s = \frac{X_1}{1 - X_4} ,
+Y_s = \frac{X_2}{1 - X_4} ,
 Z_s = \frac{X_3}{1 - X_4} $$
 
 **Rotation in $S^3$**
@@ -89,5 +89,5 @@ The next step will compute Gaussian curvature on the surface in $S^3$ using the 
 
 ## References
 
-1. Lawson, H. B. (1970). *Complete minimal surfaces in $S^3$*. Annals of Mathematics, 92(2), 335–374.
+1. Lawson, H. B. (1970). *Complete minimal surfaces in* $S^3$. Annals of Mathematics, 92(2), 335–374.
 # Sudanese-Mobius-Strip-Mean-Curvature-in-R-3
