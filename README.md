@@ -44,7 +44,7 @@ It helps move the surface away from singularities (e.g., near the poles) and pre
 
 **$\mathbb{R}^3$ Curvature**
 
-For both of the following calculations the coefficients are equal since they are both in $\mathbb{R}^3$
+For both of the following calculations the coefficients are equal since they are both in $\mathbb{R}^3$, each subscript represents a partial derrivative with respect to the subscripted variable, and n represents the unit normal vector of the surface.
 
 The First Fundamental Form is given by
 
@@ -82,7 +82,7 @@ The surface's Gaussian curvature in $\mathbb{R}^3$ is written as $K$ and is calc
 
 $K = \frac{LN - M**2}{(EG - F^2)}$.
 
-*$S^3$ curvature*
+$\mathbb{S}^3$ **curvature**
 
 Since the strip is a minimal surface in $S^3$ it has zero mean curvature
 
@@ -92,7 +92,11 @@ $K = \frac{LN - M**2}{(EG - F^2)}$ + $K_0$
 
 The first and second fundamental forms are the same as described above but are calculated using the original 4D parameterization in $S^3$ provided by Lawson. $K_0$ describes the curvature inherint to the space $S^3$ and is known to be 1.0.
 
-##Project Structure
+**Notes**
+
+Since Mobius Strips are non-orientable a plot of absolute mean curvature is shown, to remove the flipping due to the normal vector.
+
+## Project Structure
 
 **Dependencies**
 
@@ -102,6 +106,7 @@ The first and second fundamental forms are the same as described above but are c
 **Usage**
 
 -src/sudanese_mobius/ contains the parameterization, projection, and curvature calculation code
+
 -scripts/ contains the script used to plot the surface
 
 To generate the visualization run the plotting script directly after cloning.  The script imports code from src.
@@ -112,4 +117,3 @@ Working on a notebooks folder with a jupyter lab simulation
 ## References
 
 1. Lawson, H. B. (1970). *Complete minimal surfaces in* $S^3$. Annals of Mathematics, 92(2), 335–374.
-# Sudanese-Mobius-Strip-Mean-Curvature-in-R-3
