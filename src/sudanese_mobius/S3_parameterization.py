@@ -5,7 +5,7 @@ import numpy as np
 
 def mobius_strip_s3(u, v, twist=0.5):
     """
-    Parameterization of the Möbius strip in S³ as devised by Lawson.
+    Parameterization of the Mobius strip in S3 as devised by Lawson.
 
     The parameter `twist` controls how the surface is embedded in S3.
     Setting `twist=0.5` produces a Mobius strip; setting `twist=1.0`

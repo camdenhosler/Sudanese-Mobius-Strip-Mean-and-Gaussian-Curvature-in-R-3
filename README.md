@@ -40,7 +40,7 @@ $$
 $$
 
 This matrix performs a rotation in $\mathbb{R}^4$ that reorients the Sudanese Möbius strip in $S^3$. 
-It helps move the surface away from singularities (e.g., near the poles) and prepares it for stereographic projection into $\mathbb{R}^3$. The factor of $1/2$ ensures that the transformation preserves scale appropriately.
+It helps move the surface away from singularities (near the north pole) and prepares it for stereographic projection into $\mathbb{R}^3$. The factor of $1/2$ ensures that the transformation preserves scale appropriately.
 
 **$\mathbb{R}^3$ Curvature**
 
