@@ -18,11 +18,11 @@ The Sudanese Mobius Strip is a minimal surface mobius strip in $S^3$ orginally p
 
 **Stereographic Projection**
 
-The Stereographic Projection from $S^3$ to $/mathbb{R}^3$ is calculated as below
+The Stereographic Projection from $S^3$ to $\mathbb{R}^3$ is calculated as below
 
 $$ 
-X_s = \frac{X_1}{1 - X_4} ,\  
-Y_s = \frac{X_2}{1 - X_4} ,\ 
+X_s = \frac{X_1}{1 - X_4} ,\:  
+Y_s = \frac{X_2}{1 - X_4} ,\: 
 Z_s = \frac{X_3}{1 - X_4} $$
 
 **Rotation in $S^3$**
