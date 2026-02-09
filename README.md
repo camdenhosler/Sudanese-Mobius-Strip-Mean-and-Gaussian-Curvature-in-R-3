@@ -82,11 +82,11 @@ $$
 
 The surface's mean curvature in $\mathbb{R}^3$ is written as $H$ and is calculated as shown below
 
-$H = \frac{LG - 2MF + NE}{2(EG - F^2)}$.
+$$H = \frac{LG - 2MF + NE}{2(EG - F^2)}$$
 
 The surface's Gaussian curvature in $\mathbb{R}^3$ is written as $K$ and is calculated as shown below
 
-$K = \frac{LN - M**2}{(EG - F^2)}$.
+$$K = \frac{LN - M^2}{(EG - F^2)}$$
 
 $\mathbb{S}^3$ **curvature**
 
@@ -94,7 +94,7 @@ Since the strip is a minimal surface in $S^3$ it has zero mean curvature
 
 The surface's Gaussian curvature is now calculated as shown below
 
-$K = \frac{LN - M**2}{(EG - F^2)}$ + $K_0$
+$$K = \frac{LN - M^2}{(EG - F^2)} + K_0$$
 
 The first and second fundamental forms are the same as described above but are calculated using the original 4D parameterization in $S^3$ provided by Lawson. $K_0$ describes the curvature inherint to the space $S^3$ and is known to be 1.0.
 
