@@ -149,7 +149,6 @@ def plot_surface(
 
         fig.canvas.draw_idle()
 
-
     
     rax = plt.axes([0.02, 0.4, 0.18, 0.25], facecolor="#EAEAF2")
     radio = RadioButtons(rax, list(data_lib.keys()), active=list(data_lib.keys()).index(initial_key))

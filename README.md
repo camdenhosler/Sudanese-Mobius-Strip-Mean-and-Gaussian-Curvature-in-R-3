@@ -10,6 +10,12 @@ The mean curvature is still included to illustrate the surface's bending in spac
 
 This project focuses on numerical visualization and geometric interpretation rather than closed-form curvature analysis.
 
+<p align="center">
+  <img src="images/figure1.png" width="850" alt="Sudanese Mobius Strip Mean Curvature">
+  <br>
+  <i><b>Figure 1:</b> Stereographic projection of the Sudanese Möbius strip into $\mathbb{R}^3$. The surface is color-coded by Absolute Mean Curvature $|H|$.</i>
+</p>
+
 ## Mathematical Background
 
 **Sudanese Mobius Strip**
