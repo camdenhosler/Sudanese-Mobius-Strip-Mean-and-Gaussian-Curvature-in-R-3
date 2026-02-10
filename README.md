@@ -32,13 +32,28 @@ No new theoretical results are claimed.
 **Dependencies**
 
 - Python 3.10+
-- NumPy
-- Matplotlib
+- NumPy 1.26+
+- Matplotlib 3.10.0+
 
 **Install**
 
+```bash
+git clone https://github.com/camdenhosler/Sudanese-Mobius-Strip-Mean-and-Gaussian-Curvature-in-R-3.git
+cd Sudanese-Mobius-Strip-Mean-and-Gaussian-Curvature-in-R-3
 ```
-pip install -r requirements.txt
+
+To create a virtual environment:
+```bash
+python -m venv venv
+
+# On Windows: 
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+```bash
+pip install -e .
 ```
 
 **Run**
