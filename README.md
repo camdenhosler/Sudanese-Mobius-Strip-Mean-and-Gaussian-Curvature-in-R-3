@@ -2,7 +2,9 @@
 # Sudanese Möbius Strip Visualization
 
 ## Overview
-This repository implements a numerical visualization of the Sudanese Möbius strip (Lawson parameterization in $S^3$) stereographically projected into $\mathbb{R}^3$.  This project was built as a learning exercise in differential geometry, numerical curvature estimation, and interactive scientific visualization. 
+This project numerically generates and visualizes a Möbius strip embedded in 4D and projected into 3D, showing how curvature changes under stereographic projection.
+
+More specifically this repository implements a numerical visualization of the Sudanese Möbius strip (Lawson parameterization in $S^3$) stereographically projected into $\mathbb{R}^3$.  This project was built as a learning exercise in differential geometry, numerical curvature estimation, and interactive scientific visualization. 
 
 The code computes local scale factors, the absolute mean curvature in $\mathbb{R}^3$, the Gaussian curvature in $\mathbb{R}^3$, and the difference in Gaussian curvature induced by the projection.  An interactive visualization is included which allows for switching between the scalar fields.
 
@@ -33,7 +35,7 @@ No new theoretical results are claimed.
 
 - Python 3.10+
 - NumPy 1.26+
-- Matplotlib 3.10.0+
+- Matplotlib 3.7+
 
 **Install**
 

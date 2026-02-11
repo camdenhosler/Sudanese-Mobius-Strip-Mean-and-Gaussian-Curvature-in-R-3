@@ -1,14 +1,16 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "sudanese_mobius"
 version = "0.1.0"
 description = "Visualization and curvature analysis of Sudanese Möbius Strips"
+readme = "README.md"
+requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.26",
-    "matplotlib>=3.10.0",
+    "matplotlib>=3.7",
 ]
 
 [tool.setuptools.packages.find]
