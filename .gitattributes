@@ -1,8 +1,0 @@
-# Treat all Python files as Python
-*.py linguist-language=Python
-
-# Treat Markdown files as documentation
-*.md linguist-documentation
-
-# Ignore image files from language stats
-*.png linguist-vendored
