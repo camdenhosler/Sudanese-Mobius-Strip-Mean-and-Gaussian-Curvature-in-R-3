@@ -4,7 +4,7 @@
 ## Overview
 This project numerically generates and visualizes a Möbius strip embedded in 4D and projected into 3D, showing how curvature changes under stereographic projection.
 
-More specifically this repository implements a numerical visualization of the Sudanese Möbius strip (Lawson parameterization in $S^3$) stereographically projected into $\mathbb{R}^3$.  This project was built as a learning exercise in differential geometry, numerical curvature estimation, and interactive scientific visualization. 
+ This project was built as a learning exercise in differential geometry, numerical curvature estimation, and interactive scientific visualization. 
 
 The code computes local scale factors, the absolute mean curvature in $\mathbb{R}^3$, the Gaussian curvature in $\mathbb{R}^3$, and the difference in Gaussian curvature induced by the projection.  An interactive visualization is included which allows for switching between the scalar fields.
 
@@ -42,19 +42,16 @@ No new theoretical results are claimed.
 ```bash
 git clone https://github.com/camdenhosler/Sudanese-Mobius-Strip-Mean-and-Gaussian-Curvature-in-R-3.git
 cd Sudanese-Mobius-Strip-Mean-and-Gaussian-Curvature-in-R-3
-```
 
-To create a virtual environment:
-```bash
+# Create a virtual environment
 python -m venv venv
 
-# On Windows: 
-venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
-```
+# On Windows: 
+# venv\Scripts\activate
 
-```bash
+pip install --upgrade pip
 pip install -e .
 ```
 
@@ -64,7 +61,7 @@ pip install -e .
 python scripts/generate_figure.py
 ```
 
-For interactive plots run the script with a Qt backend (e.g. ```%matplotlib qt5``` in IPython) 
+Interactive plotting works automatically if a GUI backend is active. If running in a Jupyter notebook or IPython a Qt backend could be used (e.g. ```%matplotlib qt5```) 
 
 ## Mathematical Context
 
