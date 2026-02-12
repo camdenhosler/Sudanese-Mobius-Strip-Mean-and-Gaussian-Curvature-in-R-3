@@ -99,6 +99,8 @@ def plot_surface(
     mappable.set_array(current_data)
     cbar = plt.colorbar(mappable, ax=ax, shrink=0.7)
     cbar.set_label(colorbar_titles[initial_key])
+    
+    plt.style.use("seaborn-v0_8")
 
     def draw_surface(data2d, color_norm, cmap_obj):
         # facecolors must be (n,m,4)
@@ -160,8 +162,7 @@ def plot_surface(
     Xflat, Yflat, Zflat = c[:, :, 0], c[:, :, 1], c[:, :, 2]
     ax.set_box_aspect([np.ptp(Xflat), np.ptp(Yflat), np.ptp(Zflat)])
     ax.set_title("Visualization of Sudanese Mobius Strip")
-    
-    plt.style.use("seaborn-v0_8")
+
     plt.show()
 
     return fig, ax, radio
