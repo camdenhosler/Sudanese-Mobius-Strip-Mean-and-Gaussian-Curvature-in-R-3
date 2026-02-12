@@ -24,7 +24,7 @@ No new theoretical results are claimed.
 * Interactive visualization of scalar fields with radio buttons
 
 <p align="center">
-  <img src="images/figure1.png" width="550" alt="Sudanese Möbius Strip Mean Curvature">
+  <img src="images/figure.png" width="550" alt="Sudanese Möbius Strip Mean Curvature">
   <br>
   <i>Stereographic projection of the Sudanese Möbius strip into $\mathbb{R}^3$. The surface is color-coded by Absolute Mean Curvature $|H|$.</i>
 </p>
