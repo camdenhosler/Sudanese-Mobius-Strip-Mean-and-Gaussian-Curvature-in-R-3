@@ -2,13 +2,11 @@
 # Sudanese Möbius Strip Visualization
 
 ## Overview
-This project numerically generates and visualizes a Möbius strip embedded in 4D and projected into 3D, showing how curvature changes under stereographic projection.
 
- This project was built as a learning exercise in differential geometry, numerical curvature estimation, and interactive scientific visualization. 
+This project numerically constructs the Sudanese Möbius strip (a minimal surface in $S^3 \subset \mathbb{R}^4$), applies stereographic projection to $\mathbb{R}^3$, and visualizes the resulting distortion of metric and curvature related geometric quantities.
 
-The code computes local scale factors, the absolute mean curvature in $\mathbb{R}^3$, the Gaussian curvature in $\mathbb{R}^3$, and the difference in Gaussian curvature induced by the projection.  An interactive visualization is included which allows for switching between the scalar fields.
 
-No new theoretical results are claimed.
+The code estimates local scale factors, the absolute mean curvature in $\mathbb{R}^3$, the Gaussian curvature of the projected surface, and the difference in the intrinsic Gaussian curvature of the surface in $S^3$ and the projected surface.  An interactive visualization is included which allows for switching between the scalar fields.
 
 ## Key Features
 * Parameterization of the Sudanese Möbius strip in $S^3$ (Lawson 1970)
@@ -16,10 +14,10 @@ No new theoretical results are claimed.
 * Stereographic projection of the Sudanese Möbius strip into $\mathbb{R}^3$
 
 * Numerical Estimation of:
-    *   Local scale factors in $\mathbb{R}^3$
-    * Absolute mean curvature in $\mathbb{R}^3$
-    * Gaussian curvature in $\mathbb{R}^3$
-    * Difference in Gaussian curvature between $S^3$ and $\mathbb{R}^3$
+    *  Local scale factors in $\mathbb{R}^3$
+    *  Absolute mean curvature in $\mathbb{R}^3$
+    *  Gaussian curvature in $\mathbb{R}^3$
+    *  Difference in Gaussian curvature between $S^3$ and $\mathbb{R}^3$
 
 * Interactive visualization of scalar fields with radio buttons
 
@@ -65,15 +63,15 @@ Interactive plotting works automatically if a GUI backend is active. If running 
 
 ## Mathematical Context
 
-Since the Stereographic Projection is conformal but not isometric (angles are preserved but distances are not) curvature will be distorted.  The purpose of this project is to visualize this distortion.  The Sudanese Möbius strip was chosen for this project since it is both non-orientable and is a minimal surface in $S^3$.  The surface being minimal implies its mean curvature in $S^3$ is zero everywhere.  Due to the extrinsic nature of mean curvature (dependent on the surface's orientation in $S^3$ before projection) this property allows for easier visualization of distortion brought about by the projection.  Due to the non-orientability of the surface the absolute value of the mean curvature was taken.
+Since the **Stereographic Projection** is conformal but not isometric (angles are preserved but distances are not) curvature will be distorted.  The purpose of this project is to visualize this distortion.  The **Sudanese Möbius strip** was chosen for this project since it is both **non-orientable** and is a **minimal surface** in $S^3$.  The surface being minimal implies its mean curvature in $S^3$ is zero everywhere.  Due to the extrinsic nature of mean curvature (dependent on the surface's orientation in $S^3$ before projection) this property allows for easier visualization of distortion brought about by the projection.  Due to the non-orientability of the surface the absolute value of the mean curvature was taken.
 
 ## Limitations
 
-* Curvatures are computed numerically using finite differences on a parameter grid
+* Curvatures are computed numerically using finite differences on a uniform parameter grid
 
 * Mean curvature values depend on the orientation in $S^3$ (since it's extrinsic)
 
-* Although an orthogonal rotation matrix (unitary in $\mathbb{R}^4$) was used to rotate the surface of the singularity at the north pole, some artifacts may still remain
+* Although an orthogonal rotation matrix was used to rotate the surface off of the north pole singularity, some artifacts may still remain
 
 ## References
 
